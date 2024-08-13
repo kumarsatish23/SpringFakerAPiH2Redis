@@ -49,7 +49,7 @@ public class MovieService {
         return movieRepository.findAll();
     }
 
-//    @Cacheable(value = "movies", key = "#id")
+    @Cacheable(value = "movies", key = "#id")
     public Optional<Movie> getMovieById(Long id) {
         delay();
         return movieRepository.findById(id);
